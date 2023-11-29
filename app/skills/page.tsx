@@ -3,7 +3,7 @@ function RedBack({children,bg}:{children:string|React.ReactNode,bg:"red"|'blue'|
     <div className="group relative">
       <div className={`
       transition bg-[${bg}]   w-full h-full absolute z-0 opacity-0
-      group-hover:translate-x-[150%] group-hover:-rotate-12 delay-1000 group-hover:opacity-100`}>{children}</div>
+      group-hover:translate-x-[150%] group-hover:-rotate-12 delay-10 duration-1000 group-hover:opacity-100`}>{children}</div>
       <div >{children}</div>
       
     </div>
