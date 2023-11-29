@@ -1,5 +1,5 @@
 'use client'
-import { motion, useScroll,useAnimation,useInView } from "framer-motion"
+import { motion, useAnimation,useInView } from "framer-motion"
 import { useEffect,useRef } from "react";
 interface Props{
     children:string|React.ReactNode,
