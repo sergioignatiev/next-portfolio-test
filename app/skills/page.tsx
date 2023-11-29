@@ -47,7 +47,7 @@ export default function Works ()  {
         
         loop={true}>
 
-{array.map(a=><SwiperSlide className='w-[full]' key={Date.now()}><div className='w-[600px] h-[600px] px-[0px] text-[200px] bg-white text-left' >{a}</div></SwiperSlide>)}
+
         </Swiper>
         </div>
   );
