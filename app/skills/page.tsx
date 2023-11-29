@@ -1,22 +1,31 @@
 'use client'
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel,EffectCards, EffectCoverflow } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+let Im=({src}:{src:string})=>{
+  return <Image
+  alt='image'
+  height={400}
+  width={300}
+  src={`/${src}`}
+  />
+}
 
-
+let array=[1,2,3,4,5,6,7,<Im src={'logo.png'}/>,<Im src='vercel.svg'/>]
 export default function Works ()  {
   return (
     <div >
-      
+
     <Swiper
-    className=' h-[600px]'
+    className='w-[600px]  text-center'
  
     id="swiper"
-   direction='vertical'
+   direction='horizontal'
         spaceBetween={0}
-        slidesPerView={3}
+        slidesPerView={1}
         
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
@@ -31,17 +40,14 @@ export default function Works ()  {
           pagination={{
             clickable: true,
           }}
-         mousewheel={true}
-         effect='coverflow'
-          modules={[Mousewheel,EffectCoverflow]}
+         mousewheel={false}
+         effect='cards'
+          modules={[Mousewheel,EffectCoverflow,EffectCards]}
        
         
         loop={true}>
-<SwiperSlide className='w-[300px] h-[300px]'><h1 className='text-[200px] w-[300px] bg-[red]'>1</h1></SwiperSlide>
-<SwiperSlide className='w-[300px] h-[300px]'><h1 className='text-[200px] w-[300px] bg-[red]'>2</h1></SwiperSlide>
-<SwiperSlide className='w-[300px] h-[300px]'><h1 className='text-[200px] w-[300px] bg-[red]'>3</h1></SwiperSlide>
-<SwiperSlide className='w-[300px] h-[300px]'><h1 className='text-[200px] w-[300px] bg-[red]'>4</h1></SwiperSlide>
 
+{array.map(a=><SwiperSlide className='w-[full]' key={Date.now()}><div className='w-[600px] h-[600px] px-[0px] text-[200px] bg-white text-left' >{a}</div></SwiperSlide>)}
         </Swiper>
         </div>
   );

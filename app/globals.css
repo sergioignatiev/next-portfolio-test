@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.body-left{
+  font-family: 'proxima-nova', sans-serif;
+  background: grey;
+  background-image: url('/logo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right 20px top 40px;
+  background-size: contain;
+  min-height: 2000px;
 
+}
+*{
+  transition: opacity 21s ;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

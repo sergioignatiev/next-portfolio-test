@@ -8,7 +8,7 @@ const Nav = () => {
 let currentPath=usePathname()
     let navbar=[{href:"/",label:"Главная"},{href:"/works",label:"Работы"},{href:"/skills",label:"Навыки"}]
   return (
- <nav className="text-right sticky top-0 bg-white bg-opacity-70 py-3">
+ <nav className="text-right sticky top-0 py-5 px-[100px]">
 
   {navbar.map(l=><Link key={l.href} className={classnames({
         'opacity-50':l.href===currentPath,
