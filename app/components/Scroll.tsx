@@ -1,11 +1,12 @@
 'use client'
 import { motion, useScroll,useAnimation,useInView } from "framer-motion"
-import { useEffect,useState,useRef } from "react";
+import { useEffect,useRef } from "react";
 interface Props{
     children:string|React.ReactNode,
-    width?:'fit-content'|'100%'
+    width?:'fit-content'|'100%',
+    duration?:number
 }
-export function Scroll({children,width='fit-content'}:Props) {
+export function Scroll({children,width='fit-content',duration=0.4}:Props) {
  const ref =useRef(null)
  const isInView=useInView(ref,{once:false})
  const mainControls=useAnimation()
@@ -22,13 +23,13 @@ export function Scroll({children,width='fit-content'}:Props) {
     
     <motion.div className="py-[20px]" 
     variants={{
-        hidden:{opacity:0,y:75,x:-200},
-        visible:{opacity:1,y:0,x:0}
+        hidden:{transform:"rotateX(90deg)"},
+        visible:{transform:'rotateX(0deg)'}
 
     }}
     initial='hidden'
     animate={mainControls}
-    transition={{duration:0.5}}
+    transition={{duration:0.4,delay:duration}}
     >{children}</motion.div>  
  
   </div>)
