@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { Scroll } from './Scroll'
+import { InViev } from '../lib/inviev'
 export const Button = ({clasName,children,onC}:{clasName?:string,children:string|JSX.Element|any,onC?:()=>void}) => {
   return (
-    <Scroll>
+    <InViev>
         <div onClick={onC} className={`px-[10px] py-[5px] text-white rounded-full ${clasName}`}>{children}</div>
-  </Scroll>
+  </InViev>
   )
 }
