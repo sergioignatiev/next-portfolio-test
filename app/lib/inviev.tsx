@@ -49,7 +49,8 @@ export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
    return (
      <div ref={ref}>
      
-     <motion.div className="py-[20px]" 
+     <motion.div className="py-[20px]   " 
+  
      variants={{
          hidden:{transform:"translateY(-1900px)"},
          visible:{transform:'translateY(0px)'}
@@ -58,7 +59,10 @@ export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
      initial='hidden'
      animate={mainControls}
      transition={{duration:0.4,delay:duration}}
-     >{children}</motion.div>  
+     >
+      <div className="hover:translate-y-[-10%] transition duration-1000">{children}</div>
+      
+      </motion.div>  
   
    </div>)
  }

@@ -3,11 +3,11 @@ import { Aside, SliderLeft } from "../lib/anim"
 const Skills = () => {
   return (
    <>
-   <SliderLeft>
+  
    <Aside bg='blue'>
     <h1 className="text-white text-[50px] z-100 ">Привет Аня</h1>
    </Aside>
-   </SliderLeft>
+   
    <Aside bg='blue'>
     <>
     <p>dПокопался немного в анимации, часть сам могу сделать, часть с помощью библиотек</p>
