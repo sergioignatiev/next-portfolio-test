@@ -1,9 +1,10 @@
 .fillleft {
     display: inline-block;
-    background: linear-gradient(to left, #222629 50%, red 50%) right;
+    background: linear-gradient(to left, transparent 50%, white 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
   }
   .fillleft:hover {
     background-position: left;
+    color:black;
   }
