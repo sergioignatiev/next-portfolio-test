@@ -4,7 +4,7 @@ const Slider = () => {
   return (
 <>
 <SliderLeft bkg='red'>
-<div className="text-[40px] px-[10px] my-[100px]">TOPs</div>
+<div className="text-[40px] px-[10px] ">TOPs</div>
 
 </SliderLeft>
 <br></br>
