@@ -2,8 +2,8 @@ function RedBack({children,bg}:{children:string|React.ReactNode,bg:"red"|'blue'|
   return (
     <div className="group relative">
       <div className={`
-      transition bg-[${bg}]   w-full h-full absolute z-0 opacity-0
-      group-hover:translate-x-[150%] group-hover:-rotate-12 delay-10 duration-1000 group-hover:opacity-100`}>{children}</div>
+      transition bg-[${bg}] p-4   w-full h-full absolute z-0 opacity-0
+      group-hover:translate-x-[150%] group-hover:-rotate-12 delay-10 duration-1000 group-hover:opacity-100`}></div>
       <div >{children}</div>
       
     </div>
@@ -16,7 +16,7 @@ const Skills = () => {
    <RedBack bg='blue'>
     <h1 className="text-white text-[50px] z-100 ">Привет Аня</h1>
    </RedBack>
-   <RedBack bg='blue'>
+   <RedBack bg='red'>
     <>
     <p>Покопался немного в анимации, часть сам могу сделать, часть с помощью библиотек</p>
     <p>Здесь довольно примитивно получается, но поебаться можнодо ума довести </p>
