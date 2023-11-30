@@ -3,13 +3,13 @@ import { SliderLeft } from "@/app/lib/anim"
 const Slider = () => {
   return (
 <>
-<SliderLeft>
-<div className="text-[50px] px-[10px] mx-[-10px]">TOP</div>
+<SliderLeft bkg='red'>
+<div className="text-[40px] px-[10px] my-[100px]">TOPs</div>
 
 </SliderLeft>
 <br></br>
 <SliderLeft>
-<div className="text-[50px] px-[10px]">Left</div>
+<div className="text-[60px] px-[10px]">Left</div>
 </SliderLeft>
 </>
   )

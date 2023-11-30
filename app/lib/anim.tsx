@@ -10,7 +10,9 @@ export function Aside({children,bg}:{children:string|React.ReactNode,bg:"red"|'b
       </div>
     )
   }
-  export const SliderLeft = ({children,classNames}:{children:string|React.ReactNode,classNames?:string}) => {
+  export const SliderLeft = ({children,classNames,bkg}:{children:string|React.ReactNode,classNames?:string,bkg?:string}) => {
+   
+
     return (
      
   <div  className={anim.fillleft}>{children}</div>
