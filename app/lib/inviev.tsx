@@ -36,7 +36,7 @@ export function InViev({children,width='fit-content',duration=0.4}:Props) {
 }
 export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
   const ref =useRef(null)
-  const isInView=useInView(ref,{once:false})
+  const isInView=useInView(ref,{once:true})
   const mainControls=useAnimation()
   useEffect(()=>{
     if(isInView){
@@ -60,9 +60,11 @@ export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
      animate={mainControls}
      transition={{duration:0.4,delay:duration}}
      >
-      <div className="hover:translate-y-[-10%] transition duration-1000">{children}</div>
+      <div className="hover:translate-y-[-1%] hover:opacity-10 transition duration-1000">{children}</div>
       
       </motion.div>  
   
    </div>)
  }
+
+ 
