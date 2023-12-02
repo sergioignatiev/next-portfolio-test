@@ -47,6 +47,7 @@ export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
     }
   },[isInView])
    return (
+    
      <div ref={ref}>
      
      <motion.div className="py-[20px]   " 
@@ -64,7 +65,43 @@ export function InVievLeft({children,width='fit-content',duration=0.4}:Props) {
       
       </motion.div>  
   
-   </div>)
+   </div>
+  
+   )
  }
 
+ export function InVievShake({children,width='fit-content',duration=0.4}:Props) {
+  const ref =useRef(null)
+  const isInView=useInView(ref,{once:false})
+  const mainControls=useAnimation()
+  useEffect(()=>{
+    if(isInView){
+     mainControls.start('visible')
+    }
+    else if(!isInView){
+     mainControls.start('hidden')
+    }
+  },[isInView])
+   return (
+    
+     <div ref={ref}>
+     
+     <motion.div className="py-[20px]   " 
+  
+     variants={{
+         hidden:{transform:"translateY(-19px)"},
+         visible:{transform:'translateY(0px)'}
  
+     }}
+     initial='hidden'
+     animate={mainControls}
+     transition={{duration:0.4,delay:duration}}
+     >
+      <div >{children}</div>
+      
+      </motion.div>  
+  
+   </div>
+  
+   )
+ }
