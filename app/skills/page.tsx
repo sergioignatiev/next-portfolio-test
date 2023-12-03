@@ -4,11 +4,11 @@ const Skills = () => {
   return (
    <>
   
-   <Aside bg='blue'>
+   <Aside bg='/next.svg'>
     <h1 className="text-white text-[50px] z-100 ">Привет Аня</h1>
    </Aside>
    
-   <Aside bg='blue'>
+   <Aside bg='/logo.png'>
     <>
     <p>dПокопался немного в анимации, часть сам могу сделать, часть с помощью библиотек</p>
     <p>Здесь довольно примитивно получается, но поебаться можнодо ума довести </p>

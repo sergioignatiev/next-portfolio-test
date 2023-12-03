@@ -1,11 +1,17 @@
 'use client'
+import { nanoid } from 'nanoid'
 import { InViev,InVievLeft } from "../lib/inviev"
+let myName=['h','e','l','l','o','- ','t','h','e','r','e']
+let i=1
 export function Name(){
+ 
     return   <><div className="relative"><h1 className='text-[100px] font-semibold  flex'>
   <InViev duration={0.1}>  <div className="" > Сергей</div></InViev>
     <InViev duration={0.5}><div className="ml-[30px] text-[red]">Игнатьев</div></InViev>
+   
   </h1>
 
+<div className="flex">{myName.map((m)=><InVievLeft key={nanoid()} duration={i+1}>{m}</InVievLeft>)}</div>
 
 
   </div>
