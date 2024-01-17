@@ -2,6 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h1 {
+    @apply text-2xl;
+    @apply text-[red]
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
 *{
   box-sizing: border-box;
  max-width: 100%;
@@ -36,4 +45,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+@media screen(sm) {
+*{}
 }
