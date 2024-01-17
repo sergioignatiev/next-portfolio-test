@@ -1,32 +1,22 @@
 'use client'
-import { motion, useScroll } from "framer-motion"
-import { Button } from './components/Button'
-import { useState } from 'react'
-import { Scroll } from "./components/Scroll";
+import { useState } from "react"
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  let [st,setSt]=useState("translate-x-[-200px] opacity-10")
-  function changeAlert(){
-    setSt("transform translate-x-[0px] opacity-100 text-center")
-  }
-  function back(){
-    setSt('translate-x-[-1000px] opacity-10')
-  }
+ let [theme,setTheme]=useState('white')
+ 
   return (
 
-   <div className="text-left homepage">
-      <Button onC={changeAlert} clasName={`bg-[blue]  text-[20px] `}>Just a button</Button>
-<ul >
-  <li>framer motion</li>
-  <li>prisma</li>
-  <li>spanish</li>
-</ul>
+   <div className={`${theme}  `}>
+    <h1 className="text-[100px]">{localStorage.getItem('name')}</h1>
+    <div className="text-[black] dark:text-[red] dark:bg-[black]">
+    <div className="dark:text-[100px]" onClick={()=>setTheme('dark')}>dark</div>
+    <div className="text-[100px] dark:text-[14px]" onClick={()=>setTheme('white')}>white</div>
 
-
-   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quam placeat deserunt natus voluptates unde odit alias, voluptatum enim id dignissimos ipsum animi harum itaque laudantium sed nostrum a modi saepe. Amet sequi molestias velit architecto, veritatis atque iste magni mollitia corporis quas similique saepe hic vel ad obcaecati dolores adipisci impedit at earum ea dolorem.
+   <h1 className="">Hello There</h1>
+   <h1 className="text-[black] dark:text-[red] dark:bg-[black]">Hello There</h1>
+   <h1 className="">Hello There</h1>
  
-
+</div>
    </div>
   
   )

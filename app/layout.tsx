@@ -1,17 +1,20 @@
 
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
+
 import Link from 'next/link'
 import './globals.css'
 import Nav from './components/Nav'
-import Footer from './components/Footer'
+
 import { Scroll } from './components/Scroll'
-import { Name } from './components/Name'
+
 const roboto=Roboto({
   subsets: ['latin'],
   weight: '900'
 })
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,10 +26,14 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) 
+
+
+{
+  
   return (
-    <html lang="en">
-      <body className='text-[white] bg-[#222629]  '>
+    <html lang='en' className=''>
+      <body className='dark:text-[white] dark:bg-black bg-[white]'>
        
       <Nav/>
         <div className="flex ">
@@ -37,7 +44,7 @@ export default function RootLayout({
           <div className="relative">
     
      </div>
-     <Name/>
+    
        <main>{children}</main>
      
         </div>
@@ -45,7 +52,7 @@ export default function RootLayout({
         </div>
         <div className="body-left w-[50vw]"></div>
        </div>
-       <Footer/>
+      
        
         </body>
     </html>
