@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className='dark:text-[white] dark:bg-black bg-[white]'>
        
       <Nav/>
-        <div className="flex ">
+        <div className="flex sm:bg-[blue] ">
         <div className="w-[50vw]">
       
         <div className="md:pl-[100px] md:pr-[100px] px-[20px]">
